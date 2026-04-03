@@ -1,0 +1,31 @@
+[dependency-groups]
+dev = [
+    "mypy",
+    "ruff",
+]
+
+[project]
+name = "rename-pictures"
+version = "0.0.1"
+dependencies = [
+    "lmstudio",
+    "pillow",
+    "pyyaml",
+]
+requires-python = ">=3.12"
+
+[tool.mypy]
+# ignore_missing_imports = true
+strict = true
+# warn_unused_ignores = true
+
+[tool.ruff]
+line-length = 90
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
